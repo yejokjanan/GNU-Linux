@@ -1,7 +1,7 @@
 # Resumen
 En mi experiencia considero los siguientes comandos como los más básicos e importantes a la hora de ser un administrador de servidores GNU/Linux. Comencemos por saber dónde nos encontramos dentro del sistema, como movernos de un lugar a otro, como crear y/o eliminar ficheros y directorios.
 
-También es importante saber, que prácticamente todos los comandos tienen sus manuales o ayudas dentro del propio sistema, en algunos casos están traducidos en diferentes idiomas, pero mayormente esta información de ayuda la encontramos en ingles. Los usos más comunes son **man (comando)** o **comando --help**. Indudablemente en internet podemos encontrar mucha ayuda, pero si quieres consultar una fuente confiable te recomiendo ir a https://manpages.debian.org/.
+También es importante saber, que prácticamente todos los comandos tienen sus manuales o ayudas dentro del propio sistema, en algunos casos están traducidos en diferentes idiomas, pero mayormente esta información de ayuda la encontramos en inglés. Los usos más comunes son **man (comando)** o **comando --help**. Indudablemente en internet podemos encontrar mucha ayuda, pero si quieres consultar una fuente confiable te recomiendo ir a https://manpages.debian.org/.
 
 Ahora, también es importante conocer la diferencia que hay entre un usuario administrador (con privilegios) y un usuario normal (sin privilegios). ¿Cómo los podemos diferenciar a simple vista? Sencillo, un usuario administrador siempre se indica con **#** (numeral), y los demás usuarios con **$** (moneda). Un usuaro administrador puede hacer todo y de todo sin ninguna restricción, a diferencia de un usuario normal que tiene limitaciones para ejecutar comandos, moverse dentro del sistema, etc.
 
@@ -22,12 +22,18 @@ Esto nos indica el *usuario*, el **@** (arroba) como separador, seguido del *nom
 usuario@host:~$ pwd
 /home/usuario
 ```
+Este comando es muy sencillo, basicamente nos muestra el directorio donde nos encontramos. En algunos servidores, dependiendo también de la personalización del sistema, al iniciar sesión no se nos indica ninguna ubicación, es por eso que debemos recurrir a este comando para saber que podemos hacer.
 
 **Listar contenido del directorio:** [ls](https://manpages.debian.org/bookworm/manpages-es/ls.1.es.html)
 ```bash
 usuario@host:~$ ls
 documents images music video files
 ```
+En su mayoría, los comandos permiten introducir otras opciones que para aprovechar al máximo sus capacidades, estas opciones se amplían con el signo – (menos (en algunos casos --))
+
+Por ejemplo si escribes ls -l, el comando va a mostrar en forma de lista los directorios, si escribes ls -a, va a mostrar los ficheros y directorios ocultos.
+
+**Nota:** *En GNU/Linux, los ficheros y directorios se ocultan escribiendo un punto **.** al inicio. Por ejemplo **.document.txt** es un fichero oculto, **.images** es un directorio oculto.*
 
 **Cambiar de directorio:** [cd](https://manpages.debian.org/bookworm/tcl8.6-doc/cd.3tcl.en.html)
 ```bash
