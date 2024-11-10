@@ -13,3 +13,8 @@ La primera vez que llegué a usar una distribución GNU/Linux fue [openSUSE](htt
 
 **¿Buscas certificación en GNU/Linux?**
 - [Linux Professional Institute](https://learning.lpi.org/es/)
+  - [Linux Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-es.pdf)
+  - [Web Development Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-030-100-es.pdf)
+  - [Open Source Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-050-100-es.pdf)
+  - [LPIC-1 Exam 101](https://learning.lpi.org/pdfstore/LPI-Learning-Material-101-500-es.pdf)
+  - [LPIC-1 Exam 102](https://learning.lpi.org/pdfstore/LPI-Learning-Material-102-500-es.pdf)
