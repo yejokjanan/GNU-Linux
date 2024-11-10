@@ -27,13 +27,28 @@ Este comando es muy sencillo, basicamente nos muestra el directorio donde nos en
 **Listar contenido del directorio:** [ls](https://manpages.debian.org/bookworm/manpages-es/ls.1.es.html)
 ```bash
 usuario@host:~$ ls
-documents images music video files
+documents files images music video
 ```
-En su mayoría, los comandos permiten introducir otras opciones que para aprovechar al máximo sus capacidades, estas opciones se amplían con el signo – (menos (en algunos casos --))
+En su mayoría, los comandos permiten introducir otras opciones para aprovechar al máximo sus capacidades, estas opciones se amplían con el signo – (menos (en algunos casos --))
 
-Por ejemplo si escribes ls -l, el comando va a mostrar en forma de lista los directorios, si escribes ls -a, va a mostrar los ficheros y directorios ocultos.
+Por ejemplo si escribes **ls -l**, el comando va a mostrar en forma de lista los ficheors y directorios, si escribes **ls -a**, va a mostrar los ficheros y directorios ocultos.
 
 **Nota:** *En GNU/Linux, los ficheros y directorios se ocultan escribiendo un punto **.** al inicio. Por ejemplo **.document.txt** es un fichero oculto, **.images** es un directorio oculto.*
+
+Si escribres **ls -F**, va a mostrar un **/** (slash) al final de los directorios, esto nos ayuda a identificar los directorios y no confundirlos con un fichero. También podemos combinar estas opciones **-l -a -F**, y muchas más si queremos ahorrar tiempo al escribir todo por separado, quedando así **ls -laF**; mostrando en pantalla todo el contenido en forma de lista.
+
+**Listar el contenido de un directorio en formato similar a un árbol:** [tree](https://manpages.debian.org/bookworm/tree/tree.1.en.html)
+```bash
+usuario@host:~$ tree
+.
+├── documents
+├── files
+├── images
+├── music
+└── video
+
+5 directories, 0 files
+```
 
 **Cambiar de directorio:** [cd](https://manpages.debian.org/bookworm/tcl8.6-doc/cd.3tcl.en.html)
 ```bash
