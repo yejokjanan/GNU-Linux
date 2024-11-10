@@ -13,7 +13,7 @@ usuario@host:~$
 ```bash
 root@host:~#
 ```
-Esto nos indica el usuario, el **@** (arroba) como separador, seguido del nombre del host; doble punto **:** como separación, la **~** (virgulilla) indica el directorio raíz del usuario; y el signo **$** (moneda) nos indica los privilegios del usuario.
+Esto nos indica el *usuario*, el **@** (arroba) como separador, seguido del *nombre del host*; doble punto **:** como separación, la **~** (virgulilla) indica el *directorio raíz del usuario;* y el signo **$** (moneda) nos indica los *privilegios del usuario.*
 
 # Comandos básicos
 
