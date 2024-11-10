@@ -8,6 +8,8 @@ La primera vez que llegué a usar una distribución GNU/Linux fue [openSUSE](htt
 
 **Personaliza tu GNU/Linux**
 - [Bash Prompt Generator](https://bash-prompt-generator.org/)
+- [Oh My ZSH!](https://ohmyz.sh/)
+- [LSDeluxe](https://github.com/lsd-rs/lsd)
 
 **¿Buscas certificación en GNU/Linux?**
 - [Linux Professional Institute](https://learning.lpi.org/es/)
