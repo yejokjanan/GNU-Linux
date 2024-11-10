@@ -18,7 +18,7 @@ Esto nos indica el *usuario*, el **@** (arroba) se usa como separador, seguido d
 En la mayoría, los comandos permiten introducir otras opciones para aprovechar al máximo sus capacidades, estas opciones se ejecutan con el signo - (menos), y en algunos casos -- (doble menos).
 
 # Comandos básicos
-**Imprime información del sistema:** [uname](https://manpages.debian.org/bookworm/manpages-es/uname.1.es.html)
+**Imprimir información del sistema:** [uname](https://manpages.debian.org/bookworm/manpages-es/uname.1.es.html)
 ```bash
 usuario@host:~$ uname
 Linux
@@ -27,6 +27,18 @@ Este comando por si solo únicamente nos muestra el nombre del kernel (núcleo),
 ```bash
 usuario@host:~$ uname -a
 Linux host 5.15.0-125-generic #135-Ubuntu SMP Mon Jan 1 00:00:00 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+```
+
+**Imprimir nombre de usuario:** [whoami](https://manpages.debian.org/bookworm/manpages-es/whoami.1.es.html)
+```bash
+usuario@host:~$ whoami
+usuario
+```
+
+**Imprimir el nombre del host:** [hostname](https://manpages.debian.org/bookworm/manpages-es/hostname.1.es.html)
+```bash
+usuario@host:~$ hostname
+host
 ```
 
 **Imprimir nombre del directorio actual de trabajo:** [pwd](https://manpages.debian.org/bookworm/manpages-es/pwd.1.es.html)
