@@ -17,15 +17,15 @@ Esto nos indica el usuario, el **@** (arroba) como separador, seguido del nombre
 
 # Comandos básicos
 
-**Imprimir nombre del directorio actual de trabajo:** [pwd]([https://manpages.debian.org/bookworm/coreutils/pwd.1.en.html](https://manpages.debian.org/bookworm/manpages-es/pwd.1.es.html))
+**Imprimir nombre del directorio actual de trabajo:** [pwd](https://manpages.debian.org/bookworm/manpages-es/pwd.1.es.html)
 ```bash
 usuario@host:~$ pwd
 /home/usuario
 ```
 
-**Listar contenido del directorio:** [ls]([https://manpages.debian.org/bookworm/coreutils/ls.1.en.html](https://manpages.debian.org/bookworm/manpages-es/ls.1.es.html))
+**Listar contenido del directorio:** [ls](https://manpages.debian.org/bookworm/manpages-es/ls.1.es.html)
 ```bash
-usuario@host:~$ [ls](https://manpages.debian.org/bookworm/manpages-es/ls.1.es.html)
+usuario@host:~$ ls
 documents images music video files
 ```
 
@@ -43,5 +43,4 @@ usuario@host:~$ touch document.txt
 **Crear directorio:** [mkdir](https://manpages.debian.org/bookworm/manpages-es/mkdir.1.es.html)
 ```bash
 usuario@host:~$ mkdir codes
-```
 ```
