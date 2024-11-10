@@ -13,9 +13,21 @@ usuario@host:~$
 ```bash
 root@host:~#
 ```
-Esto nos indica el *usuario*, el **@** (arroba) como separador, seguido del *nombre del host*; doble punto **:** como separación, la **~** (virgulilla) indica el *directorio raíz del usuario;* y el signo **$** (moneda) nos indica los *privilegios del usuario.*
+Esto nos indica el *usuario*, el **@** (arroba) se usa como separador, seguido del *nombre del host*; luego doble punto **:** como separador, la **~** (virgulilla) indica el *directorio raíz del usuario;* y el signo **$** (moneda) nos indica los *privilegios del usuario.*
+
+En la mayoría, los comandos permiten introducir otras opciones para aprovechar al máximo sus capacidades, estas opciones se ejecutan con el signo - (menos), y en algunos casos -- (doble menos).
 
 # Comandos básicos
+**Imprime información del sistema:** [uname](https://manpages.debian.org/bookworm/manpages-es/uname.1.es.html)
+```bash
+usuario@host:~$ uname
+Linux
+```
+Este comando por si solo unicamente nos muestra el nombre del kernel (núcleo), así que para ver toda la información referente al *kernel, nombre del host, versión del kernel, tipo de maquina y procesador (32 o 64 bits) y el sistema operativo;* vamos a usar la opción corta -a, o también podríamos usar la opción larga --all.
+```bash
+usuario@host:~$ uname -a
+Linux host 5.15.0-125-generic #135-Ubuntu SMP Mon Jan 1 00:00:00 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
+```
 
 **Imprimir nombre del directorio actual de trabajo:** [pwd](https://manpages.debian.org/bookworm/manpages-es/pwd.1.es.html)
 ```bash
@@ -29,8 +41,6 @@ Este comando es muy sencillo, basicamente nos muestra el directorio donde nos en
 usuario@host:~$ ls
 documents files images music video
 ```
-En su mayoría, los comandos permiten introducir otras opciones para aprovechar al máximo sus capacidades, estas opciones se amplían con el signo – (menos (en algunos casos --))
-
 Por ejemplo si escribes **ls -l**, el comando va a mostrar en forma de lista los ficheors y directorios, si escribes **ls -a**, va a mostrar los ficheros y directorios ocultos.
 
 **Nota:** *En GNU/Linux, los ficheros y directorios se ocultan escribiendo un punto **.** al inicio. Por ejemplo **.document.txt** es un fichero oculto, **.images** es un directorio oculto.*
