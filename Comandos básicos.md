@@ -25,7 +25,7 @@ usuario@host:~$ pwd
 
 **Listar contenido del directorio:** [ls]([https://manpages.debian.org/bookworm/coreutils/ls.1.en.html](https://manpages.debian.org/bookworm/manpages-es/ls.1.es.html))
 ```bash
-usuario@host:~$ ls
+usuario@host:~$ [ls](https://manpages.debian.org/bookworm/manpages-es/ls.1.es.html)
 documents images music video files
 ```
 
