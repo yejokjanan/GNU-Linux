@@ -23,7 +23,7 @@ En la mayoría, los comandos permiten introducir otras opciones para aprovechar 
 usuario@host:~$ uname
 Linux
 ```
-Este comando por si solo unicamente nos muestra el nombre del kernel (núcleo), así que para ver toda la información referente al *kernel, nombre del host, versión del kernel, tipo de maquina y procesador (32 o 64 bits) y el sistema operativo;* vamos a usar la opción corta -a, o también podríamos usar la opción larga --all.
+Este comando por si solo únicamente nos muestra el nombre del kernel (núcleo), así que para ver toda la información referente al *kernel, nombre del host, versión del kernel, tipo de maquina y procesador (32 o 64 bits) y el sistema operativo;* vamos a usar la opción corta -a, o también podríamos usar la opción larga --all.
 ```bash
 usuario@host:~$ uname -a
 Linux host 5.15.0-125-generic #135-Ubuntu SMP Mon Jan 1 00:00:00 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
