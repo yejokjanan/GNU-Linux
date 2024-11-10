@@ -22,12 +22,14 @@ También he probado muchas distribuciones que me han parecido muy buenas, en dis
 Aunque la lista es mucho más larga, estas son algunas de las que he usado.
 
 **Personaliza tu GNU/Linux**
+
 Otra de las ventajas es personalizar, y practicamente se puede personalizar todo.
 - [Bash Prompt Generator](https://bash-prompt-generator.org/)
 - [Oh My ZSH!](https://ohmyz.sh/)
 - [LSDeluxe](https://github.com/lsd-rs/lsd)
 
 **¿Buscas certificación en GNU/Linux?**
+
 - [Linux Professional Institute](https://learning.lpi.org/es/)
   - [Linux Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-010-160-es.pdf)
   - [Web Development Essentials](https://learning.lpi.org/pdfstore/LPI-Learning-Material-030-100-es.pdf)
