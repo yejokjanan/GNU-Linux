@@ -82,7 +82,7 @@ usuario@host:~$ tree
 usuario@host:~$ cd documents
 usuario@host:~/documents$
 ```
-Básicamente este comando lo que nos permite hacer es movernos libremente por los directorios. Si queremos ir a la raíz del sistema solo es escribir `cd /`; si queremos ir a un directorio que está dentro del directorio actual podemos escribir `cd *directorio*`. Si es un directorio oculto recuerda escribir el punto `cd *.directorio*`. Si queremos ir a un directorio que está dentro de otros directorios debemos escribir la ruta completa `cd /directorio1/directorio2/directorio3`. Si queremos volver atrás escribimos `cd ..` (doble punto); también podemos volver atrás entre varios directorios escribiendo `cd ../../..`. Ahora, sin importar la ubicación dónde nos encontremos, podemos ir rápidamente al directorio ráiz del usuario escribiendo `cd`.
+Básicamente este comando lo que nos permite hacer es movernos libremente por los directorios. Si queremos ir a la raíz del sistema solo es escribir `cd /`; si queremos ir a un directorio que está dentro del directorio actual podemos escribir `cd directorio`. Si es un directorio oculto recuerda escribir el punto `cd .directorio`. Si queremos ir a un directorio que está dentro de otros directorios debemos escribir la ruta completa `cd /directorio1/directorio2/directorio3`. Si queremos volver atrás escribimos `cd ..` (doble punto); también podemos volver atrás entre varios directorios escribiendo `cd ../../..`. Ahora, sin importar la ubicación dónde nos encontremos, podemos ir rápidamente al directorio ráiz del usuario escribiendo `cd`.
 
 > **Uso de la tecla Tab**
 > 
@@ -92,8 +92,22 @@ Básicamente este comando lo que nos permite hacer es movernos libremente por lo
 ```bash
 usuario@host:~$ touch document.txt
 ```
+Aunque el propósito original de este comando es actualizar la fecha de acceso y modificación del fichero a la hora actual, se usa para crear ficheros vacíos si no existen. ¿Con qué propósito hacer esto? Supongamos que necesitamos crear varios ficheros para luego comenzar a editarlos, entonces podríamos hacer lo siguiente: `touch doc1 doc2 doc3`. Ahora, al ejecutar `ls` vemos estos ficheros.
+
+> **Formato**
+> 
+> En GNU/Linux, los ficheros pueden tener o no tener un formato definido (extensión) como lo son `.txt` `.php` `.html` `.css` `.js` etc... sin que esto nos ocasione un problema al momento de editarlos o visualizarlos.
 
 **Crear directorio:** [mkdir](https://manpages.debian.org/bookworm/manpages-es/mkdir.1.es.html)
 ```bash
 usuario@host:~$ mkdir codes
 ```
+Básicamente el comando `mkdir` lo que hace es crear un directorio si no existe, si ya existe nos va mostrar algo similar a esto: `mkdir: no se puede crear el directorio «codes»: El archivo ya existe`. Como en el caso del comando `touch`, podemos crear varios directorios vacíos al mismo tiempo, por ejemplo: `mkdir dir1 dir2 dir3`. Ahora al ejecutar `ls` vemos estos directorios.
+
+> Espacios en el nombre
+> 
+> ¿Cómo podemos crear un fichero o directorio que tenga un espacio intermedio? Una de las dos formas es crearlo entre `“”` (comillas) o con un `\` (slash invertido) al final de la palabra que queremos separar de la otra. Veamos algunos ejemplos: `touch “fichero de pruebas1”` o `touch fichero\ de\ pruebas2`. En el caso de crear un directorio hacemos lo mismo: `mkdir “directorio de pruebas1”` o `mkdir directorio\ de\ pruebas2`.
+> 
+> Cuando ejecutamos `ls` y un fichero o directorio tiene espacios, lo va a mostrar entre `‘’` (comillas simples). Si queremos movernos a un directorio que contiene un espacio en el nombre, hacemos el mismo procedimiento, escribiendo entre `“”` (comillas) o indicando el espacio con un `\` (slash invertido).
+> 
+> Es importante comprender esta diferencia, es por eso que en la mayoría de los casos, los desarrolladores prefieren usar signos como `-` `_` `.` para separar los nombres. Esto se hace con propósito de evitar errores al invocar ficheros o directorios.
