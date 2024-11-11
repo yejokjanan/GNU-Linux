@@ -97,6 +97,8 @@ usuario@host:~$ tree
 
 5 directories, 0 files
 ```
+> [!NOTE]
+> Es posible que este paquete no esté instalado, así que tendrás que instalarlo según sea la distribución que estés ejecutando. El proceso de instalación de paquetes lo veremos más adelante.
 
 ## [cd](https://manpages.debian.org/bookworm/tcl8.6-doc/cd.3tcl.en.html)
 - Cambiar de directorio.
