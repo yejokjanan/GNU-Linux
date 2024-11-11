@@ -5,6 +5,7 @@ Prácticamente todos los comandos tienen sus manuales o ayudas dentro del propio
 
 Ahora, también es importante conocer la diferencia que hay entre un usuario administrador (con privilegios) y un usuario normal (sin privilegios). ¿Cómo los podemos diferenciar a simple vista? Sencillo, un usuario administrador siempre se indica con `#` (numeral), y los demás usuarios con `$` (moneda). Un usuaro administrador puede hacer todo y de todo sin ninguna restricción, a diferencia de un usuario normal que tiene limitaciones para ejecutar comandos, moverse dentro del sistema, etc.
 
+> [!NOTE]
 > **Uso de mayúsculas y minúsculas.**
 > 
 > GNU/Linux es un sistema sensible a mayúsculas y minúsculas, esto quiere decir que debemos escribir tal cual el nombre del fichero o directorio. En el caso de Windows no hay diferencia, y podríamos escribir todo en mayúsculas o minúsculas y no habría ningún error, pero en GNU/Linux sí.
@@ -60,7 +61,8 @@ documents files images music video
 ```
 Por ejemplo si escribes `ls -l`, el comando va a mostrar en forma de lista los ficheors y directorios, si escribes `ls -a`, va a mostrar los ficheros y directorios ocultos.
 
-> **Nota:** *En GNU/Linux, los ficheros y directorios se ocultan escribiendo un punto `.` al inicio. Por ejemplo `.document.txt` es un fichero oculto, `.images` es un directorio oculto.*
+> [!NOTE]
+> En GNU/Linux, los ficheros y directorios se ocultan escribiendo un punto `.` al inicio. Por ejemplo `.document.txt` es un fichero oculto, `.images` es un directorio oculto.
 
 Si escribres `ls -F`, va a mostrar un `/` (slash) al final de los directorios, esto nos ayuda a identificar los directorios y no confundirlos con un fichero. También podemos combinar estas opciones `-l -a -F`, y muchas más si queremos ahorrar tiempo al escribir todo por separado, quedando así `ls -laF`; mostrando en pantalla todo el contenido en forma de lista.
 
@@ -84,9 +86,10 @@ usuario@host:~/documents$
 ```
 Básicamente este comando lo que nos permite hacer es movernos libremente por los directorios. Si queremos ir a la raíz del sistema solo es escribir `cd /`; si queremos ir a un directorio que está dentro del directorio actual podemos escribir `cd directorio`. Si es un directorio oculto recuerda escribir el punto `cd .directorio`. Si queremos ir a un directorio que está dentro de otros directorios debemos escribir la ruta completa `cd /directorio1/directorio2/directorio3`. Si queremos volver atrás escribimos `cd ..` (doble punto); también podemos volver atrás entre varios directorios escribiendo `cd ../../..`. Ahora, sin importar la ubicación dónde nos encontremos, podemos ir rápidamente al directorio ráiz del usuario escribiendo `cd`.
 
+> [!NOTE]
 > **Uso de la tecla Tab**
 > 
-> *Si el nombre de un fichero o directorio es largo, o no lo recordamos bien, podemos usar la tecla Tab y el sistema nos ayuda a completarlo. Ejemplo: `cd docu` y presionando Tab  nos completa el nombre `cd documents`.También puede que hayan varios ficheros o directorios que comiencen de igual forma, en este caso presionamos dos veces Tab y nos muestra los ficheros o directorios que coinciden con la búsqueda.*
+> Si el nombre de un fichero o directorio es largo, o no lo recordamos bien, podemos usar la tecla Tab y el sistema nos ayuda a completarlo. Ejemplo: `cd docu` y presionando Tab  nos completa el nombre `cd documents`.También puede que hayan varios ficheros o directorios que comiencen de igual forma, en este caso presionamos dos veces Tab y nos muestra los ficheros o directorios que coinciden con la búsqueda.
 
 **Crear fichero vacio:** [touch](https://manpages.debian.org/bookworm/manpages-es/touch.1.es.html)
 ```bash
@@ -94,6 +97,7 @@ usuario@host:~$ touch document.txt
 ```
 Aunque el propósito original de este comando es actualizar la fecha de acceso y modificación del fichero a la hora actual, se usa para crear ficheros vacíos si no existen. ¿Con qué propósito hacer esto? Supongamos que necesitamos crear varios ficheros para luego comenzar a editarlos, entonces podríamos hacer lo siguiente: `touch doc1 doc2 doc3`. Ahora, al ejecutar `ls` vemos estos ficheros.
 
+> [!NOTE]
 > **Formato**
 > 
 > En GNU/Linux, los ficheros pueden tener o no tener un formato definido (extensión) como lo son `.txt` `.php` `.html` `.css` `.js` etc... sin que esto nos ocasione un problema al momento de editarlos o visualizarlos.
@@ -104,10 +108,24 @@ usuario@host:~$ mkdir codes
 ```
 Básicamente el comando `mkdir` lo que hace es crear un directorio si no existe, si ya existe nos va mostrar algo similar a esto: `mkdir: no se puede crear el directorio «codes»: El archivo ya existe`. Como en el caso del comando `touch`, podemos crear varios directorios vacíos al mismo tiempo, por ejemplo: `mkdir dir1 dir2 dir3`. Ahora al ejecutar `ls` vemos estos directorios.
 
-> Espacios en el nombre
+> [!NOTE]
+> **Espacios en el nombre**
 > 
 > ¿Cómo podemos crear un fichero o directorio que tenga un espacio intermedio? Una de las dos formas es crearlo entre `“”` (comillas) o con un `\` (slash invertido) al final de la palabra que queremos separar de la otra. Veamos algunos ejemplos: `touch "fichero de pruebas1"` o `touch fichero\ de\ pruebas2`. En el caso de crear un directorio hacemos lo mismo: `mkdir "directorio de pruebas1"` o `mkdir directorio\ de\ pruebas2`.
 > 
 > Cuando ejecutamos `ls` y un fichero o directorio tiene espacios, lo va a mostrar entre `''` (comillas simples). Si queremos movernos a un directorio que contiene un espacio en el nombre, hacemos el mismo procedimiento, escribiendo entre `""` (comillas) o indicando el espacio con un `\` (slash invertido).
 > 
 > Es importante comprender esta diferencia, es por eso que en la mayoría de los casos, los desarrolladores prefieren usar signos como `-` `_` `.` para separar los nombres. Esto se hace con propósito de evitar errores al invocar ficheros o directorios.
+
+**Borrar ficheros y directorios:** [rm](https://manpages.debian.org/bookworm/manpages-es/rm.1.es.html) y [rmdir](https://manpages.debian.org/bookworm/manpages-es/rmdir.1.es.html)
+```bash
+$ rm document.txt
+```
+```bash
+$ rmdir documents
+```
+
+> [!NOTE]
+> Hay que eliminar los ficheros y directorios con mucho cuidado, ya que el sistema no envía nada a la papelera de reciclaje. En los sistemas con entorno gráfico y gestores de archivos sí es posible eliminar algo y recuperarlo dentro del directorio `trash`, `.trash` o `.trashdir`.
+
+El comando `rmdir` solo elimina directorios vacíos, si contiene ficheros o directorios dará como resultado un error. Para eliminar correctamente un directorio y todo su contenido debemos usar el comando `rm -r directorio`. La opción `-r` borra el contenido de los directorios recursivamente. Debido a que `rm` por sí sólo no borra directorios, pero si los ficheros. Si queremos confirmar qué queremos borrar y qué no, podemos usar la opción `-i`, haciendo que `rm` nos pregunte si estamos seguros; a lo cual respondemos con `s` para sí, y `n` para no.
