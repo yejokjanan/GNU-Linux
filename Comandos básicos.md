@@ -1,9 +1,13 @@
 # Resumen
-En mi experiencia considero los siguientes comandos como los más básicos e importantes a la hora de ser un administrador de servidores GNU/Linux. Comencemos por saber dónde nos encontramos dentro del sistema, como movernos de un lugar a otro, como crear y/o eliminar ficheros y directorios.
+En mi experiencia considero los siguientes comandos como los más básicos e importantes a la hora de ser un administrador de servidores GNU/Linux. Así que comencemos por saber dónde nos encontramos dentro del sistema, como movernos de un lugar a otro, como crear y/o eliminar ficheros y directorios.
 
-También es importante saber, que prácticamente todos los comandos tienen sus manuales o ayudas dentro del propio sistema, en algunos casos están traducidos en diferentes idiomas, pero mayormente esta información de ayuda la encontramos en inglés. Los usos más comunes son `man (comando)` o `comando --help`. Indudablemente en internet podemos encontrar mucha ayuda, pero si quieres consultar una fuente confiable te recomiendo ir a https://manpages.debian.org/.
+Prácticamente todos los comandos tienen sus manuales o ayudas dentro del propio sistema, en algunos casos están traducidos en diferentes idiomas, pero mayormente esta información de ayuda la encontramos en inglés. Los usos más comunes son `man (comando)` o `comando --help`. Indudablemente en internet podemos encontrar mucha ayuda, pero si quieres consultar una fuente confiable te recomiendo ir a https://manpages.debian.org/.
 
 Ahora, también es importante conocer la diferencia que hay entre un usuario administrador (con privilegios) y un usuario normal (sin privilegios). ¿Cómo los podemos diferenciar a simple vista? Sencillo, un usuario administrador siempre se indica con `#` (numeral), y los demás usuarios con `$` (moneda). Un usuaro administrador puede hacer todo y de todo sin ninguna restricción, a diferencia de un usuario normal que tiene limitaciones para ejecutar comandos, moverse dentro del sistema, etc.
+
+> **Uso de mayúsculas y minúsculas.**
+> 
+> GNU/Linux es un sistema sensible a mayúsculas y minúsculas, esto quiere decir que debemos escribir tal cual el nombre del fichero o directorio. En el caso de Windows no hay diferencia, y podríamos escribir todo en mayúsculas o minúsculas y no habría ningún error, pero en GNU/Linux sí.
 
 Normalmente vamos a ver el [cli](https://es.wikipedia.org/wiki/Interfaz_de_l%C3%ADnea_de_comandos) de la siguiente manera:
 
@@ -23,25 +27,26 @@ En la mayoría, los comandos permiten introducir otras opciones para aprovechar 
 usuario@host:~$ uname
 Linux
 ```
-Este comando por si solo únicamente nos muestra el nombre del kernel (núcleo), así que para ver toda la información referente al *kernel, nombre del host, versión del kernel, tipo de maquina y procesador (32 o 64 bits) y el sistema operativo;* vamos a usar la opción corta `-a`, o también podríamos usar la opción larga `--all`.
+Este comando por si solo únicamente nos muestra el nombre del [kernel (núcleo)](https://www.kernel.org/), así que para ver toda la información referente al *kernel, nombre del host, versión del kernel, tipo de maquina y procesador (32 o 64 bits) y el sistema operativo;* vamos a usar la opción corta `-a`, o también podríamos usar la opción larga `--all`.
 ```bash
 usuario@host:~$ uname -a
 Linux host 5.15.0-125-generic #135-Ubuntu SMP Mon Jan 1 00:00:00 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
-**Imprimir nombre de usuario:** [whoami](https://manpages.debian.org/bookworm/manpages-es/whoami.1.es.html)
+**Imprimir nombre del usuario:** [whoami](https://manpages.debian.org/bookworm/manpages-es/whoami.1.es.html)
 ```bash
 usuario@host:~$ whoami
 usuario
 ```
 
-**Imprimir el nombre del host:** [hostname](https://manpages.debian.org/bookworm/manpages-es/hostname.1.es.html)
+**Imprimir nombre del host:** [hostname](https://manpages.debian.org/bookworm/manpages-es/hostname.1.es.html)
 ```bash
 usuario@host:~$ hostname
 host
 ```
+Los comandos `whoami` y `hostname` son muy útiles para determinar el equipo y el usuario al que estamos accediendo; mientras uno aprende en una maquina local y con todo definido, se nos hace muy fácil, pero en ocasiones debemos administrar servidores en remoto, que pueden estar en otro lugar del mundo y con una configuración que no nos muestre mas que el signo `#` o `$`.
 
-**Imprimir nombre del directorio actual de trabajo:** [pwd](https://manpages.debian.org/bookworm/manpages-es/pwd.1.es.html)
+**Imprimir nombre del directorio actual:** [pwd](https://manpages.debian.org/bookworm/manpages-es/pwd.1.es.html)
 ```bash
 usuario@host:~$ pwd
 /home/usuario
@@ -55,8 +60,7 @@ documents files images music video
 ```
 Por ejemplo si escribes `ls -l`, el comando va a mostrar en forma de lista los ficheors y directorios, si escribes `ls -a`, va a mostrar los ficheros y directorios ocultos.
 
-> **Nota:**
-> *En GNU/Linux, los ficheros y directorios se ocultan escribiendo un punto `.` al inicio. Por ejemplo `.document.txt` es un fichero oculto, `.images` es un directorio oculto.*
+> **Nota:** *En GNU/Linux, los ficheros y directorios se ocultan escribiendo un punto `.` al inicio. Por ejemplo `.document.txt` es un fichero oculto, `.images` es un directorio oculto.*
 
 Si escribres `ls -F`, va a mostrar un `/` (slash) al final de los directorios, esto nos ayuda a identificar los directorios y no confundirlos con un fichero. También podemos combinar estas opciones `-l -a -F`, y muchas más si queremos ahorrar tiempo al escribir todo por separado, quedando así `ls -laF`; mostrando en pantalla todo el contenido en forma de lista.
 
@@ -78,6 +82,11 @@ usuario@host:~$ tree
 usuario@host:~$ cd documents
 usuario@host:~/documents$
 ```
+Básicamente este comando lo que nos permite hacer es movernos libremente por los directorios. Si queremos ir a la raíz del sistema solo es escribir `cd /`; si queremos ir a un directorio que está dentro del directorio actual podemos escribir `cd *directorio*`. Si es un directorio oculto recuerda escribir el punto `cd *.directorio*`. Si queremos ir a un directorio que está dentro de otros directorios debemos escribir la ruta completa `cd /directorio1/directorio2/directorio3`. Si queremos volver atrás escribimos `cd ..` (doble punto); también podemos volver atrás entre varios directorios escribiendo `cd ../../..`. Ahora, sin importar la ubicación dónde nos encontremos, podemos ir rápidamente al directorio ráiz del usuario escribiendo `cd`.
+
+> **Uso de la tecla Tab**
+> 
+> *Si el nombre de un fichero o directorio es largo, o no lo recordamos bien, podemos usar la tecla Tab y el sistema nos ayuda a completarlo. Ejemplo: `cd docu` y presionando Tab  nos completa el nombre `cd documents`.También puede que hayan varios ficheros o directorios que comiencen de igual forma, en este caso presionamos dos veces Tab y nos muestra los ficheros o directorios que coinciden con la búsqueda.*
 
 **Crear fichero vacio:** [touch](https://manpages.debian.org/bookworm/manpages-es/touch.1.es.html)
 ```bash
