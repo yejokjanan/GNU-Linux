@@ -27,7 +27,8 @@ Esto nos indica el `usuario`, el `@` (arroba) se usa como separador, seguido del
 En la mayoría, los comandos permiten introducir otras opciones para aprovechar al máximo sus capacidades, estas opciones se ejecutan con el signo `-` (menos), y en algunos casos `--` (doble menos).
 
 # Comandos básicos
-## **Imprimir información del sistema:** [uname](https://manpages.debian.org/bookworm/manpages-es/uname.1.es.html)
+## [uname](https://manpages.debian.org/bookworm/manpages-es/uname.1.es.html)
+- Imprimir información del sistema:
 ```bash
 usuario@host:~$ uname
 Linux
