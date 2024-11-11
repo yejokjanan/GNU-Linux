@@ -154,3 +154,14 @@ $ rmdir documents
 > Hay que eliminar los ficheros y directorios con mucho cuidado, ya que el sistema no envía nada a la papelera de reciclaje. En los sistemas con entorno gráfico y gestores de archivos sí es posible eliminar algo y recuperarlo dentro del directorio `trash`, `.trash` o `.trashdir`.
 
 El comando `rmdir` solo elimina directorios vacíos, si contiene ficheros o directorios dará como resultado un error. Para eliminar correctamente un directorio y todo su contenido debemos usar el comando `rm -r directorio`. La opción `-r` borra el contenido de los directorios recursivamente. Debido a que `rm` por sí sólo no borra directorios, pero si los ficheros. Si queremos confirmar qué queremos borrar y qué no, podemos usar la opción `-i`, haciendo que `rm` nos pregunte si estamos seguros; a lo cual respondemos con `s` para sí, y `n` para no.
+
+## [cp](https://manpages.debian.org/bookworm/manpages-es/cp.1.es.html)
+- Copia ficheros y directorios
+```bash
+$ cp document.txt directorio/
+```
+Este comando nos permite copiar los ficheros o directorios de forma rápida y sencilla. Por ejemplo si queremos copiar un directorio con todo su contenido ejecutamos `cp -r directorio-origen directorio-destino/`. Con este comando también podemos cambiar el nombre al momento de hacer la copia; es muy útil si queremos hacer muchos cambios y necesitemos hacer una copia de seguridad
+
+# Enviar o volcar la salida de un comando a un fichero
+
+Suponiendo que queremos que al ejecutar el comando `uname -a` esa información se guarde en un fichero, vamos a usar el símbolo de dirección `>`, seguido definimos el nombre del fichero; si no existe lo crea automáticamente. Veamos unos ejemplos: `uname -a > systeminfo`, `ls > dirlist`
