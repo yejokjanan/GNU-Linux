@@ -9,6 +9,10 @@ Ahora, también es importante conocer la diferencia que hay entre un usuario adm
 > **Uso de mayúsculas y minúsculas.**
 > 
 > GNU/Linux es un sistema sensible a mayúsculas y minúsculas, esto quiere decir que debemos escribir tal cual el nombre del fichero o directorio. En el caso de Windows no hay diferencia, y podríamos escribir todo en mayúsculas o minúsculas y no habría ningún error, pero en GNU/Linux sí.
+>
+> **Uso de caracteres**
+>
+> En ingles no se usan tildes en la palabras, algo que sí pasa en el español, así que hay que tener cuidado al escribir el nombre de un fichero o directorio, ya que al escribirlos con un caracter, pueden generar errores. Ten cuidado con el uso de las **tildes** o la **eñe**.
 
 Normalmente vamos a ver el [cli](https://es.wikipedia.org/wiki/Interfaz_de_l%C3%ADnea_de_comandos) de la siguiente manera:
 
