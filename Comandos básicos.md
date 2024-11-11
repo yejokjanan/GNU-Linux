@@ -112,7 +112,7 @@ Básicamente este comando lo que nos permite hacer es movernos libremente por lo
 > Si el nombre de un fichero o directorio es largo, o no lo recordamos bien, podemos usar la tecla Tab y el sistema nos ayuda a completarlo. Ejemplo: `cd docu` y presionando Tab  nos completa el nombre `cd documents`.También puede que hayan varios ficheros o directorios que comiencen de igual forma, en este caso presionamos dos veces Tab y nos muestra los ficheros o directorios que coinciden con la búsqueda.
 
 ## [touch](https://manpages.debian.org/bookworm/manpages-es/touch.1.es.html)
-- Crear fichero vacio.
+- Crear fichero vacío.
 ```bash
 usuario@host:~$ touch document.txt
 ```
