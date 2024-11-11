@@ -1,5 +1,5 @@
 # GNU/Linux
-El proposito de este repositorio es compartir mi conocimiento y experiencia en el manejo de GNU/Linux
+El proposito de este repositorio es compartir mi conocimiento y experiencia en el manejo de GNU/Linux.
 
 **Distribución de Escritorio que uso y recomiendo**
 - [Linux Mint](https://www.linuxmint.com/)
