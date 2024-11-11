@@ -55,7 +55,8 @@ documents files images music video
 ```
 Por ejemplo si escribes `ls -l`, el comando va a mostrar en forma de lista los ficheors y directorios, si escribes `ls -a`, va a mostrar los ficheros y directorios ocultos.
 
-**Nota:** *En GNU/Linux, los ficheros y directorios se ocultan escribiendo un punto `.` al inicio. Por ejemplo `.document.txt` es un fichero oculto, `.images` es un directorio oculto.*
+> **Nota:**
+> *En GNU/Linux, los ficheros y directorios se ocultan escribiendo un punto `.` al inicio. Por ejemplo `.document.txt` es un fichero oculto, `.images` es un directorio oculto.*
 
 Si escribres `ls -F`, va a mostrar un `/` (slash) al final de los directorios, esto nos ayuda a identificar los directorios y no confundirlos con un fichero. También podemos combinar estas opciones `-l -a -F`, y muchas más si queremos ahorrar tiempo al escribir todo por separado, quedando así `ls -laF`; mostrando en pantalla todo el contenido en forma de lista.
 
