@@ -27,7 +27,7 @@ Esto nos indica el `usuario`, el `@` (arroba) se usa como separador, seguido del
 En la mayoría, los comandos permiten introducir otras opciones para aprovechar al máximo sus capacidades, estas opciones se ejecutan con el signo `-` (menos), y en algunos casos `--` (doble menos).
 
 # Comandos básicos
-**Imprimir información del sistema:** [uname](https://manpages.debian.org/bookworm/manpages-es/uname.1.es.html)
+## **Imprimir información del sistema:** [uname](https://manpages.debian.org/bookworm/manpages-es/uname.1.es.html)
 ```bash
 usuario@host:~$ uname
 Linux
@@ -38,27 +38,27 @@ usuario@host:~$ uname -a
 Linux host 5.15.0-125-generic #135-Ubuntu SMP Mon Jan 1 00:00:00 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 ```
 
-**Imprimir nombre del usuario:** [whoami](https://manpages.debian.org/bookworm/manpages-es/whoami.1.es.html)
+## **Imprimir nombre del usuario:** [whoami](https://manpages.debian.org/bookworm/manpages-es/whoami.1.es.html)
 ```bash
 usuario@host:~$ whoami
 usuario
 ```
 
-**Imprimir nombre del host:** [hostname](https://manpages.debian.org/bookworm/manpages-es/hostname.1.es.html)
+## **Imprimir nombre del host:** [hostname](https://manpages.debian.org/bookworm/manpages-es/hostname.1.es.html)
 ```bash
 usuario@host:~$ hostname
 host
 ```
 Los comandos `whoami` y `hostname` son muy útiles para determinar el equipo y el usuario al que estamos accediendo; mientras uno aprende en una maquina local y con todo definido, se nos hace muy fácil, pero en ocasiones debemos administrar servidores en remoto, que pueden estar en otro lugar del mundo y con una configuración que no nos muestre mas que el signo `#` o `$`.
 
-**Imprimir nombre del directorio actual:** [pwd](https://manpages.debian.org/bookworm/manpages-es/pwd.1.es.html)
+## **Imprimir nombre del directorio actual:** [pwd](https://manpages.debian.org/bookworm/manpages-es/pwd.1.es.html)
 ```bash
 usuario@host:~$ pwd
 /home/usuario
 ```
 Este comando es muy sencillo, basicamente nos muestra el directorio donde nos encontramos. En algunos servidores, dependiendo también de la personalización del sistema, al iniciar sesión no se nos indica ninguna ubicación, es por eso que debemos recurrir a este comando para saber que podemos hacer.
 
-**Listar contenido del directorio:** [ls](https://manpages.debian.org/bookworm/manpages-es/ls.1.es.html)
+## **Listar contenido del directorio:** [ls](https://manpages.debian.org/bookworm/manpages-es/ls.1.es.html)
 ```bash
 usuario@host:~$ ls
 documents files images music video
@@ -70,7 +70,7 @@ Por ejemplo si escribes `ls -l`, el comando va a mostrar en forma de lista los f
 
 Si escribres `ls -F`, va a mostrar un `/` (slash) al final de los directorios, esto nos ayuda a identificar los directorios y no confundirlos con un fichero. También podemos combinar estas opciones `-l -a -F`, y muchas más si queremos ahorrar tiempo al escribir todo por separado, quedando así `ls -laF`; mostrando en pantalla todo el contenido en forma de lista.
 
-**Listar el contenido de un directorio en formato similar a un árbol:** [tree](https://manpages.debian.org/bookworm/tree/tree.1.en.html)
+## **Listar el contenido de un directorio en formato similar a un árbol:** [tree](https://manpages.debian.org/bookworm/tree/tree.1.en.html)
 ```bash
 usuario@host:~$ tree
 .
@@ -83,7 +83,7 @@ usuario@host:~$ tree
 5 directories, 0 files
 ```
 
-**Cambiar de directorio:** [cd](https://manpages.debian.org/bookworm/tcl8.6-doc/cd.3tcl.en.html)
+## **Cambiar de directorio:** [cd](https://manpages.debian.org/bookworm/tcl8.6-doc/cd.3tcl.en.html)
 ```bash
 usuario@host:~$ cd documents
 usuario@host:~/documents$
@@ -95,7 +95,7 @@ Básicamente este comando lo que nos permite hacer es movernos libremente por lo
 > 
 > Si el nombre de un fichero o directorio es largo, o no lo recordamos bien, podemos usar la tecla Tab y el sistema nos ayuda a completarlo. Ejemplo: `cd docu` y presionando Tab  nos completa el nombre `cd documents`.También puede que hayan varios ficheros o directorios que comiencen de igual forma, en este caso presionamos dos veces Tab y nos muestra los ficheros o directorios que coinciden con la búsqueda.
 
-**Crear fichero vacio:** [touch](https://manpages.debian.org/bookworm/manpages-es/touch.1.es.html)
+## **Crear fichero vacio:** [touch](https://manpages.debian.org/bookworm/manpages-es/touch.1.es.html)
 ```bash
 usuario@host:~$ touch document.txt
 ```
@@ -106,7 +106,7 @@ Aunque el propósito original de este comando es actualizar la fecha de acceso y
 > 
 > En GNU/Linux, los ficheros pueden tener o no tener un formato definido (extensión) como lo son `.txt` `.php` `.html` `.css` `.js` etc... sin que esto nos ocasione un problema al momento de editarlos o visualizarlos.
 
-**Crear directorio:** [mkdir](https://manpages.debian.org/bookworm/manpages-es/mkdir.1.es.html)
+## **Crear directorio:** [mkdir](https://manpages.debian.org/bookworm/manpages-es/mkdir.1.es.html)
 ```bash
 usuario@host:~$ mkdir codes
 ```
@@ -121,7 +121,7 @@ Básicamente el comando `mkdir` lo que hace es crear un directorio si no existe,
 > 
 > Es importante comprender esta diferencia, es por eso que en la mayoría de los casos, los desarrolladores prefieren usar signos como `-` `_` `.` para separar los nombres. Esto se hace con propósito de evitar errores al invocar ficheros o directorios.
 
-**Borrar ficheros y directorios:** [rm](https://manpages.debian.org/bookworm/manpages-es/rm.1.es.html) y [rmdir](https://manpages.debian.org/bookworm/manpages-es/rmdir.1.es.html)
+## **Borrar ficheros y directorios:** [rm](https://manpages.debian.org/bookworm/manpages-es/rm.1.es.html) y [rmdir](https://manpages.debian.org/bookworm/manpages-es/rmdir.1.es.html)
 ```bash
 $ rm document.txt
 ```
