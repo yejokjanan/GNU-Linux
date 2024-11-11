@@ -27,6 +27,15 @@ Esto nos indica el `usuario`, el `@` (arroba) se usa como separador, seguido del
 En la mayoría, los comandos permiten introducir otras opciones para aprovechar al máximo sus capacidades, estas opciones se ejecutan con el signo `-` (menos), y en algunos casos `--` (doble menos).
 
 # Comandos básicos
+
+En algunos casos, los comandos comparten las mismas opciones, así que consulta bien el manual. Estas son algunas de las más usadas.
+
+|Opción|Descripción|
+|:-|:-|
+|-h, --human-readable|Muestra los tamaños como 1K 234M 2G etc.|
+|-r, --recursive|Forma recursiva|
+|-v, --verbose|Explica lo que va haciendo|
+
 ## [uname](https://manpages.debian.org/bookworm/manpages-es/uname.1.es.html)
 - Imprimir información del sistema.
 ```bash
