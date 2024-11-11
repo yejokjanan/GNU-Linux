@@ -106,8 +106,8 @@ Básicamente el comando `mkdir` lo que hace es crear un directorio si no existe,
 
 > Espacios en el nombre
 > 
-> ¿Cómo podemos crear un fichero o directorio que tenga un espacio intermedio? Una de las dos formas es crearlo entre `“”` (comillas) o con un `\` (slash invertido) al final de la palabra que queremos separar de la otra. Veamos algunos ejemplos: `touch “fichero de pruebas1”` o `touch fichero\ de\ pruebas2`. En el caso de crear un directorio hacemos lo mismo: `mkdir “directorio de pruebas1”` o `mkdir directorio\ de\ pruebas2`.
+> ¿Cómo podemos crear un fichero o directorio que tenga un espacio intermedio? Una de las dos formas es crearlo entre `“”` (comillas) o con un `\` (slash invertido) al final de la palabra que queremos separar de la otra. Veamos algunos ejemplos: `touch "fichero de pruebas1"` o `touch fichero\ de\ pruebas2`. En el caso de crear un directorio hacemos lo mismo: `mkdir "directorio de pruebas1"` o `mkdir directorio\ de\ pruebas2`.
 > 
-> Cuando ejecutamos `ls` y un fichero o directorio tiene espacios, lo va a mostrar entre `‘’` (comillas simples). Si queremos movernos a un directorio que contiene un espacio en el nombre, hacemos el mismo procedimiento, escribiendo entre `“”` (comillas) o indicando el espacio con un `\` (slash invertido).
+> Cuando ejecutamos `ls` y un fichero o directorio tiene espacios, lo va a mostrar entre `''` (comillas simples). Si queremos movernos a un directorio que contiene un espacio en el nombre, hacemos el mismo procedimiento, escribiendo entre `""` (comillas) o indicando el espacio con un `\` (slash invertido).
 > 
 > Es importante comprender esta diferencia, es por eso que en la mayoría de los casos, los desarrolladores prefieren usar signos como `-` `_` `.` para separar los nombres. Esto se hace con propósito de evitar errores al invocar ficheros o directorios.
