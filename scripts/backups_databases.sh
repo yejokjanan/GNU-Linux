@@ -1,5 +1,6 @@
 #!/bin/bash
-#Repite este proceso dentro de este script si tienes diferentes bases de datos.
+#Repita este proceso dentro de este script si tiene diferentes bases de datos.
+#Agregue este script a crontab -e
 
 USER="usuario"
 PASSWORD="contraseña"
